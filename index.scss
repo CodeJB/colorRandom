@@ -1,0 +1,42 @@
+$colorPrimary : orange;
+$colorSecondary : green;
+$colorThree : purple;
+
+$map: (
+    0: pink,
+  1: $colorPrimary,
+  2: $colorSecondary,
+  3: $colorThree,
+  4: black,
+  5: blue
+);
+
+html{
+    background-color: white;
+}
+
+main{
+
+    p{
+        color: purple;
+        font-size: 93px;
+        animation-duration: 2s;
+        animation-name: changeColor;
+        animation-iteration-count: infinite;
+            }
+}
+
+
+@keyframes changeColor {    
+
+    $i: 0;
+    @while $i <11 {
+        #{$i}0%{
+            color : map-get($map, $i/2);
+        }
+        $i: $i +2;
+
+    }
+    
+}
+

@@ -1,0 +1,57 @@
+html {
+  background-color: white;
+}
+
+main p {
+  color: purple;
+  font-size: 93px;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-name: changeColor;
+          animation-name: changeColor;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes changeColor {
+  00% {
+    color: pink;
+  }
+  20% {
+    color: orange;
+  }
+  40% {
+    color: green;
+  }
+  60% {
+    color: purple;
+  }
+  80% {
+    color: black;
+  }
+  100% {
+    color: blue;
+  }
+}
+
+@keyframes changeColor {
+  00% {
+    color: pink;
+  }
+  20% {
+    color: orange;
+  }
+  40% {
+    color: green;
+  }
+  60% {
+    color: purple;
+  }
+  80% {
+    color: black;
+  }
+  100% {
+    color: blue;
+  }
+}
+/*# sourceMappingURL=index.css.map */
