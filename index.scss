@@ -31,7 +31,12 @@ main{
         position: relative;
                 &:hover > .color{
                     animation: moveColor .5s both ease-in;
+            
         }
+        &:not(hover) > .color{
+            animation: moveColorBack .5s both ease-in;
+        }
+
 
     }
 
@@ -39,10 +44,8 @@ main{
         position: inherit;
         background-color: chartreuse;       
         height: 50px;     
-        left: 15px;
-        top: 16px;
-        overflow: visible;
-    
+        
+        overflow: visible;    
     }
 
     .buttontest{
@@ -74,11 +77,23 @@ main{
 
 @keyframes moveColor {
     0% {
+      transform: translate(16px, 15px);
+    }
+  
+    100% {
+        transform:translate(0px,0px);
+    }
+  }
+
+  @keyframes moveColorBack {
+    0% {
       transform: translate(0px, 0px);
     }
   
     100% {
-        transform:translate(-16px,-15px);
+        transform:translate(16px,15px);
     }
   }
+
+ 
 

@@ -24,12 +24,15 @@ main .menubtn:hover > .color {
           animation: moveColor .5s both ease-in;
 }
 
+main .menubtn:not(hover) > .color {
+  -webkit-animation: moveColorBack .5s both ease-in;
+          animation: moveColorBack .5s both ease-in;
+}
+
 main .color {
   position: inherit;
   background-color: chartreuse;
   height: 50px;
-  left: 15px;
-  top: 16px;
   overflow: visible;
 }
 
@@ -87,23 +90,45 @@ main .buttontest {
 
 @-webkit-keyframes moveColor {
   0% {
-    -webkit-transform: translate(0px, 0px);
-            transform: translate(0px, 0px);
+    -webkit-transform: translate(16px, 15px);
+            transform: translate(16px, 15px);
   }
   100% {
-    -webkit-transform: translate(-16px, -15px);
-            transform: translate(-16px, -15px);
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
   }
 }
 
 @keyframes moveColor {
   0% {
+    -webkit-transform: translate(16px, 15px);
+            transform: translate(16px, 15px);
+  }
+  100% {
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
+  }
+}
+
+@-webkit-keyframes moveColorBack {
+  0% {
     -webkit-transform: translate(0px, 0px);
             transform: translate(0px, 0px);
   }
   100% {
-    -webkit-transform: translate(-16px, -15px);
-            transform: translate(-16px, -15px);
+    -webkit-transform: translate(16px, 15px);
+            transform: translate(16px, 15px);
+  }
+}
+
+@keyframes moveColorBack {
+  0% {
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
+  }
+  100% {
+    -webkit-transform: translate(16px, 15px);
+            transform: translate(16px, 15px);
   }
 }
 /*# sourceMappingURL=index.css.map */
