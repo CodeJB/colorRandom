@@ -23,7 +23,38 @@ main{
         animation-duration: 2s;
         animation-name: changeColor;
         animation-iteration-count: infinite;
-            }
+    }
+
+    .menubtn{
+        height: 50px;
+        width: 100px;
+        position: relative;
+                &:hover > .color{
+                    animation: moveColor .5s both ease-in;
+        }
+
+    }
+
+    .color{
+        position: inherit;
+        background-color: chartreuse;       
+        height: 50px;     
+        left: 15px;
+        top: 16px;
+        overflow: visible;
+    
+    }
+
+    .buttontest{
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: transparent;
+        border: 1px solid black;
+        height: 50px;
+        z-index: 3;
+    }
+
 }
 
 
@@ -39,4 +70,15 @@ main{
     }
     
 }
+
+
+@keyframes moveColor {
+    0% {
+      transform: translate(0px, 0px);
+    }
+  
+    100% {
+        transform:translate(-16px,-15px);
+    }
+  }
 

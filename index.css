@@ -13,6 +13,36 @@ main p {
           animation-iteration-count: infinite;
 }
 
+main .menubtn {
+  height: 50px;
+  width: 100px;
+  position: relative;
+}
+
+main .menubtn:hover > .color {
+  -webkit-animation: moveColor .5s both ease-in;
+          animation: moveColor .5s both ease-in;
+}
+
+main .color {
+  position: inherit;
+  background-color: chartreuse;
+  height: 50px;
+  left: 15px;
+  top: 16px;
+  overflow: visible;
+}
+
+main .buttontest {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  border: 1px solid black;
+  height: 50px;
+  z-index: 3;
+}
+
 @-webkit-keyframes changeColor {
   00% {
     color: pink;
@@ -52,6 +82,28 @@ main p {
   }
   100% {
     color: blue;
+  }
+}
+
+@-webkit-keyframes moveColor {
+  0% {
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
+  }
+  100% {
+    -webkit-transform: translate(-16px, -15px);
+            transform: translate(-16px, -15px);
+  }
+}
+
+@keyframes moveColor {
+  0% {
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
+  }
+  100% {
+    -webkit-transform: translate(-16px, -15px);
+            transform: translate(-16px, -15px);
   }
 }
 /*# sourceMappingURL=index.css.map */
